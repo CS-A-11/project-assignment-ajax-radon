@@ -11,6 +11,8 @@ If you are looking for latest research done in various fields of technology or h
 
 # Homepage: https://radon-ajax.herokuapp.com/
 # Admin page: https://radon-ajax.herokuapp.com/admin
+    Note Please use username: fauz and password: 00 for login to admin panel.
+    Admin used can also be used for other user functionality.
 
 # UseCases:
 
