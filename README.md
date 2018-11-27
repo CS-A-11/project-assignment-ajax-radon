@@ -10,6 +10,7 @@ Hamza Mansoor(14L-4204)<br/>
 If you are looking for latest research done in various fields of technology or have some question in mind do use Radon.<br/>
 
 # Homepage: https://radon-ajax.herokuapp.com/
+# Admin page: https://radon-ajax.herokuapp.com/admin
 
 # UseCases:
 
