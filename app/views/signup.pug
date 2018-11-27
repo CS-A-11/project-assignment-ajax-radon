@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/signup.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='/user/signup') Radon Sign Up Page
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #topBar.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/') Home
+            
+
+
+
+
+
+    .card-container
+      h4 Sign up to Radon
+      form(method='POST' action='/user/acount_signup' class='form')
+        div.form-group
+          //- label(for='name') Name:
+          input#name.form-control(type='text' placeholder='First name' name='fname' require)
+        div.form-group
+          //- label(for='name') Name:
+          input#name.form-control(type='text' placeholder='Last name' name='lname' require)
+        div.form-group
+          //- label(for='name') Name:
+          input#name.form-control(type='text' placeholder='Username' name='name' require)
+        div.form-group
+          //- label(for='pw') Password:
+          input#pw.form-control(type='password' name='password' placeholder='Password' require)
+        div.form-group
+          //- label(for='pw') Password:
+          input#pw.form-control(type='email' name='email' placeholder='Email' require)
+        div.form-group
+          //- label(for='pw') Password:
+          input#pw.form-control(type="date" name="dob")
+        .row
+          button.btn.btn-primary(type='submit') Sign up
+
+  footer.py-2.bg-dark.fixed-bottom
+    .container
+      p.m-0.text-center.text-white Copyright © Radon 2018             

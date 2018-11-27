@@ -1,0 +1,10 @@
+extends admin-layout
+
+block content
+  .page-content
+    form(method='POST' action='/admin/edit_article/' + article._id class='form' enctype="multipart/form-data")
+      input(type='file' name='articleImage')
+      div.form-group
+        input#name.form-control(type='text' placeholder='Post Heading' name='heading' value=article.title required)
+      textarea#postContent(name="post" rows=10 required)= article.content
+      button.btn.btn-primary(type='submit' style='margin-top: 10px;') Edit Article

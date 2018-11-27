@@ -1,0 +1,177 @@
+.text-white {
+  color: #fff!important;
+}
+.text-center {
+  text-align: center!important;
+}
+.m-0 {
+  margin: 0!important;
+}
+.pb-2, .py-2 {
+  padding-bottom: .5rem!important;
+}
+.bg-dark {
+  background-color: #343a40!important;
+}
+.page-content {
+  margin-top: 80px;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+.card-item {
+  height: 490px; 
+  float: left; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+.overlay-content-result {
+    width: 80%;
+    background-color: white;
+    position: relative;
+    top: 55%;
+    margin-top: 30px;
+    margin: auto;
+}
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.overlay button:hover {
+  background: #bbb;
+}
+
+.article-post {
+  margin: 80px auto;
+  width: 65%;
+  padding: 10px;
+}
+.article-post img {
+  width: 100%; 
+  height: 350px;
+}
+.article-post .post-heading, .post-content {
+  padding: 20px;
+}
+
+.comments {
+  margin: auto;
+  width: 65%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.comments .heading {
+  width: 100%;
+  font-size: 1.3em;
+  border-bottom: 1px solid black;  
+}
+
+.login-request {
+  margin: 20px 0;
+}
+.comment-section {
+  margin: 20px 0;
+}
+
+.posted-comments {
+  width: 100%;
+  margin-bottom: 20px;
+  
+}
+
+.posted-comment {
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.user-info {
+  overflow: hidden;
+  clear: both;
+}
+.user-info img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+.name-date {
+  float: left;
+  margin: 10px;
+}
+.comment-body {
+  font-size: 1.3em
+}
+
+@media (max-width: 720px) {
+  .article-post, .comments {
+    width: 85%;
+  }
+  .article-post img {
+    height: 250px;
+  }
+  .comment-body {
+    font-size: 1.2em
+  }
+} 
+@media (max-width: 520px) {
+  .article-post, .comments {
+    width: 90%;
+  }
+  .article-post img {
+    height: 200px;
+  }
+  .comment-body {
+    font-size: 1.1em
+  }
+}
