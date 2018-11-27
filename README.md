@@ -1,44 +1,43 @@
 # Radon
 Radon: Read latest innovation and ground breaking researches done
 
-MEMBERS
--> Waneed Parkash(12L-4097)
--> Fauz Ahmad(12L-4017)
--> Hamza Mansoor(14L-4204)
+# MEMBERS
+Waneed Parkash(12L-4097)
+Fauz Ahmad(12L-4017)
+Hamza Mansoor(14L-4204)
 
-About Radon:
-If you are looking for latest research done in various fields of technology or have some question in mind do use Radon.
+# About Radon:
+If you are looking for latest research done in various fields of technology or have some question in mind do use Radon.<br/>
 
-Homepage: https://radon-ajax.herokuapp.com/
+# Homepage: https://radon-ajax.herokuapp.com/
 
-UseCases:
-User can view articles (https://radon-ajax.herokuapp.com/)
-Clicking on the article will take user to details of the article
-User can comment on article after signing to app
-Only admin can post, edit or delete the article
+# UseCases:
 
-Schema:
-Collections: Articles, Discussions, Users
+User can view articles (https://radon-ajax.herokuapp.com/)<br/>
+Clicking on the article will take user to details of the article<br/>
+User can comment on article after signing to app<br/>
+Only admin can post, edit or delete the article<br/>
+
+# Schema:
+
+Collections: Articles, Discussions, Users<br/>
 
 Nested Collections: Comments
 
-Contribution:
+# Contribution:
 
-Waneed:
+Waneed:<br/>
+  -> Add article.<br/>
+  -> View article.<br/>
+  -> Edit article.<br/>
+  -> Delete article.<br/>
+  -> Dashboard of admin panel.<br/>
+  -> home page.<br/>
+  -> view article page.<br/>
+  -> add comment.<br/>
+  -> Ajax and session management in Radon.<br/>
 
-Coded the all the use cases of
-Admin
-  -> Add article
-  -> View article
-  -> Edit article
-  -> Delete article
-  -> Dashboard of admin panel
-  -> home page
-  -> view article page
-  -> add comment
-  -> Ajax and session management in Radon
-
-Fauz:
-  -> View discussions posted
-  -> View individual discussion
-  -> post comment to discussion
+Fauz:<br/>
+  -> View discussions posted.<br/>
+  -> View individual discussion.<br/>
+  -> post comment to discussion.<br/>
