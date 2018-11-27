@@ -27,17 +27,17 @@ Nested Collections: Comments
 # Contribution:
 
   # Waneed:<br/>
-    -> Add article.<br/>
-    -> View article.<br/>
-    -> Edit article.<br/>
-    -> Delete article.<br/>
-    -> Dashboard of admin panel.<br/>
-    -> home page.<br/>
-    -> view article page.<br/>
-    -> add comment.<br/>
-    -> Ajax and session management in Radon.<br/>
+    -> Add article.
+    -> View article.
+    -> Edit article.
+    -> Delete article.
+    -> Dashboard of admin panel.
+    -> home page.
+    -> view article page.
+    -> add comment.
+    -> Ajax and session management in Radon.
 
   # Fauz:<br/>
-    -> View discussions posted.<br/>
-    -> View individual discussion.<br/>
-    -> post comment to discussion.<br/>
+    -> View discussions posted.
+    -> View individual discussion.
+    -> post comment to discussion.
