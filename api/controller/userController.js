@@ -52,7 +52,7 @@ module.exports.checkUser = function (req, res) {
       if (err) {
         sendSigninResponse(res, 400, err);
       } else {
-        if (user.length === 1)
+        if (user.length >= 1)
           sendSigninResponse(res, 400, { status: "email or username already exits" });
         else {
           sendSigninResponse(res, 201, { status: "user not found", user });

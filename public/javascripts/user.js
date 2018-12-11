@@ -17,6 +17,7 @@ $(document).ready(function () {
           data: form.serialize(),
           dataType: 'json',
           success: function (data) {
+            alert("sd");
             window.location.replace("/");
           },
           error: function (xhr, status) {
