@@ -5,7 +5,7 @@ var apiOptions = {
   server: "http://localhost:5000"
 };
 if (process.env.NODE_ENV === "production") {
-  apiOptions.server = "add something here";
+  apiOptions.server = "https://radon-ajax.herokuapp.com/";
 }
 module.exports.deleteArticle = function (req, res) {
   var urlParams = {
