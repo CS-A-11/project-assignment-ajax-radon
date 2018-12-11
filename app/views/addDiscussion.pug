@@ -37,12 +37,12 @@ html(lang="en")
     
     .content-container
       
-      if discussionid === undefined
-        - var address = '/discussions/create_discussion'
-        - var buttonTextDone = 'Post'
-        - var buttonTextCancel = 'Cancel'
-        - var formMethod = 'POST'
-      else 
+      //- if discussionId === undefined
+      - var address = '/discussions/create_discussion'
+      - var buttonTextDone = 'Post'
+      - var buttonTextCancel = 'Cancel'
+      - var formMethod = 'POST'
+      //- else 
         //- - var address = '/admin/edit_article/' + article._id
         //- - var buttonText = 'Edit Article'
         //- - var formMethod = 'POST'

@@ -6,42 +6,26 @@ if (process.env.NODE_ENV === "production") {
   apiOptions.server = "add something here";
 }
 
-module.exports.editDiscussionPage = function (req, res) {
-  var requestOptions = {
-    url: req.protocol + '://' + req.get('host') + "/api/user/queries/" + req.params.discussionId,
-    method: "GET",
-    json: {}
-  }
-  request(
-    requestOptions,
-    function (err, response, body) {
-      if (!err && response.statusCode === 201) {
-        res.render("addDiscussion", {
-          title: "Edit Discussion",
-          discussion: body
-        });  
-      }
-    }
-  );
-}
-
 module.exports.editDiscussion = function (req, res) {
   if (req.file === undefined) {
     var urlParams = {
       title: req.body.heading,
       content: req.body.content,
-      createdOn: Date.now
+      createdOn: Date.now,
+      // imageName: req.body.file.filename,
+      // creatorName: req.session.user
     };
   } else {
     var urlParams = {
       title: req.body.heading,
       content: req.body.content,
       createdOn: Date.now,
-      imageName: req.file.filename
+      imageName: req.file.filename,
+      creatorName: req.session.user
     };
   }
   var requestOptions = {
-    url: req.protocol + '://' + req.get('host') + "/api/user/update_discussion/" + req.params.discussionId,
+    url: apiOptions.server + "/api/user/update_discussion/" + req.params.discussionId,
     method: "PUT",
     json: urlParams
   };
@@ -58,6 +42,26 @@ module.exports.editDiscussion = function (req, res) {
   );
 }
 
+module.exports.editDiscussionPage = function (req, res) {
+  var requestOptions = {
+    url: apiOptions.server + "/api/user/queries/" + req.params.discussionId,
+    method: "GET",
+    json: {}
+  }
+  request(
+    requestOptions,
+    function (err, response, body) {
+      if (!err && response.statusCode === 201) {
+        res.render("editDiscussion", {
+          title: "Edit Discussion",
+          discussions: body
+        });  
+      }
+    }
+  );
+}
+
+
 module.exports.viewDiss = function (req, res) {
   var ans;
   if (!req.session.user)
@@ -66,7 +70,7 @@ module.exports.viewDiss = function (req, res) {
     ans=true ; 
 
   var requestOptions = {
-    url: req.protocol + '://' + req.get('host') + "/api/user/discussions",
+    url: apiOptions.server + "/api/user/discussions",
     method: "GET",
     json: {},
   };
@@ -114,7 +118,7 @@ module.exports.createComment =function (req, res) {
     };
 
     var requestOptions = {
-      url: req.protocol + '://' + req.get('host') + "/api/user/add_comment/" + req.params.discussionId,
+      url: apiOptions.server + "/api/user/add_comment/" + req.params.discussionId,
       method: "POST",
       json: urlParams
     };
@@ -152,7 +156,7 @@ module.exports.createDiscussion = function (req,res){
       creatorName: req.session.user
     };
     var requestOptions = {
-      url: req.protocol + '://' + req.get('host') + "/api/user/discussions/add_discussion_to_radon",
+      url: apiOptions.server + "/api/user/discussions/add_discussion_to_radon",
       method: "POST",
       json: urlParams
     };
@@ -233,7 +237,7 @@ module.exports.query3 = function (req, res) {
     // url: apiOptions.server + "/api/user/discussions/" + req.params.discussionid,
     // url: apiOptions.server + "/api/user/discussions/view",
     // url: req.protocol + "://" + req.get('host') + "/api/query",
-    url: req.protocol + '://' + req.get('host') + "/user/queries/" + req.params.discussionId,
+    url: apiOptions.server + "/user/queries/" + req.params.discussionId,
     method: "GET",
     json: urlParams
   }
@@ -287,7 +291,7 @@ module.exports.query2 = function (req, res) {
     // url: apiOptions.server + "/api/user/discussions/" + req.params.discussionid,
     // url: apiOptions.server + "/api/user/discussions/view",
     // url: req.protocol + "://" + req.get('host') + "/api/query",
-    url: req.protocol + '://' + req.get('host') + "/api/user/queries/" + req.params.discussionId,
+    url: apiOptions.server + "/api/user/queries/" + req.params.discussionId,
     method: "GET",
     json: {}
   }

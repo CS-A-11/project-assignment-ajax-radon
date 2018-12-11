@@ -103,8 +103,9 @@ module.exports.acountSignUp = function (req, res) {
         console.log(err) // Print the google web page.
       }
       if (response.statusCode === 201) {
-        console.log(response.body.user);
-        res.redirect("/");
+        req.session.user = body.user;
+        console.log(req.session.user);
+        res.json({ user: body.user[0] });
       }
     }
   );
