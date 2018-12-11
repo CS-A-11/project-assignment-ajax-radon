@@ -3,7 +3,7 @@ var apiOptions = {
   server: "http://localhost:5000"
 };
 if (process.env.NODE_ENV === "production") {
-  apiOptions.server = "https://radon-ajax.herokuapp.com/";
+  apiOptions.server = "https://radon-ajax.herokuapp.com";
 }
 
 module.exports.editDiscussion = function (req, res) {
@@ -70,7 +70,7 @@ module.exports.viewDiss = function (req, res) {
     ans=true ; 
 
   var requestOptions = {
-    url: apiOptions.server + "/api/user/discussions",
+    url: req.protocol + '://' + req.get('host') + "/api/user/discussions",
     method: "GET",
     json: {},
   };
@@ -127,7 +127,7 @@ module.exports.createComment =function (req, res) {
     };
 
     var requestOptions = {
-      url: apiOptions.server + "/api/user/add_comment/" + req.params.discussionId,
+      url: req.protocol + '://' + req.get('host') + "/api/user/add_comment/" + req.params.discussionId,
       method: "POST",
       json: urlParams
     };
@@ -156,7 +156,7 @@ module.exports.query2 = function (req, res) {
   //   discussionId: req.params.discussionId
   // };
   var requestOptions = {
-    url: apiOptions.server + "/api/user/queries/" + req.params.discussionId,
+    url: req.protocol + '://' + req.get('host') + "/api/user/queries/" + req.params.discussionId,
     method: "GET",
     json: {}
   }
@@ -238,7 +238,7 @@ module.exports.createDiscussion = function (req,res){
       creatorName: req.session.user
     };
     var requestOptions = {
-      url: apiOptions.server + "/api/user/discussions/add_discussion_to_radon",
+      url: req.protocol + '://' + req.get('host') + "/api/user/discussions/add_discussion_to_radon",
       method: "POST",
       json: urlParams
     };
@@ -319,7 +319,7 @@ module.exports.query3 = function (req, res) {
     // url: apiOptions.server + "/api/user/discussions/" + req.params.discussionid,
     // url: apiOptions.server + "/api/user/discussions/view",
     // url: req.protocol + "://" + req.get('host') + "/api/query",
-    url: apiOptions.server + "/user/queries/" + req.params.discussionId,
+    url: req.protocol + '://' + req.get('host') + "/user/queries/" + req.params.discussionId,
     method: "GET",
     json: urlParams
   }
