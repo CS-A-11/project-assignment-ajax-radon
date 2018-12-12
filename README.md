@@ -46,3 +46,4 @@ Nested Collections: Comments
     -> View discussions posted.
     -> View individual discussion.
     -> post comment to discussion.
+    -> session mngmnt
