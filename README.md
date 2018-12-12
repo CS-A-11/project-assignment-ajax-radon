@@ -16,10 +16,12 @@ If you are looking for latest research done in various fields of technology or h
 
 # UseCases:
 
-User can view articles (https://radon-ajax.herokuapp.com/)<br/>
-Clicking on the article will take user to details of the article<br/>
-User can comment on article after signing to app<br/>
-Only admin can post, edit or delete the article<br/>
+    -> User can view articles (https://radon-ajax.herokuapp.com/)<br/>
+    -> Clicking on the article will take user to details of the article<br/>
+    -> User can comment on article after signing to app<br/>
+    -> Only admin can post, edit or delete the article<br/>
+    -> User can start discussions about queries
+
 
 # Schema:
 
